@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import product_grid %}
+
+{% set heading = line.name if line else ('Resultados' if active.q else 'Toda la colección') %}
+{% block title %}{{ heading }} — Terlux{% endblock %}
+
+{% block content %}
+<div class="shell border-b border-line pb-10 pt-12">
+  <nav class="eyebrow flex items-center gap-2" aria-label="Ruta">
+    <a href="{{ url_for('storefront.index') }}" class="transition-colors hover:text-ink">Inicio</a>
+    <span aria-hidden="true">/</span>
+    <span class="text-ink">{{ heading }}</span>
+  </nav>
+
+  <div class="mt-7 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+    <div>
+      <h1 class="font-display text-[clamp(2.5rem,6vw,4.25rem)] leading-[0.95]">{{ heading }}</h1>
+      {% if line %}
+      <p class="mt-4 max-w-md text-[0.9375rem] leading-relaxed text-ink-soft">{{ line.tagline }}</p>
+      {% elif active.q %}
+      <p class="mt-4 text-[0.9375rem] text-ink-soft">Para <em class="font-display not-italic text-ink">«{{ active.q }}»</em></p>
+      {% endif %}
+    </div>
+    <p class="eyebrow shrink-0">{{ products | length }} {{ 'pieza' if products | length == 1 else 'piezas' }}</p>
+  </div>
+</div>
+
+<div class="shell grid gap-12 py-12 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-14 xl:grid-cols-[15rem_minmax(0,1fr)]">
+  <aside class="lg:sticky lg:top-36 lg:self-start">
+    <details class="group lg:hidden" open>
+      <summary class="eyebrow flex cursor-pointer list-none items-center justify-between border-b border-line pb-3 text-ink">
+        Filtros<span class="transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <div class="pt-6">{% include "partials/filters.html" %}</div>
+    </details>
+    <div class="hidden lg:block">{% include "partials/filters.html" %}</div>
+  </aside>
+
+  <div>
+    <form method="get" class="flex items-center justify-between gap-5 border-b border-line pb-4">
+      {% for key, value in request.args.items() %}
+      {% if key not in ('orden', 'line_slug') %}<input type="hidden" name="{{ key }}" value="{{ value }}">{% endif %}
+      {% endfor %}
+      <label for="orden" class="eyebrow">Ordenar</label>
+      <div class="flex items-center gap-3">
+        <select id="orden" name="orden" data-autosubmit
+                class="cursor-pointer border-b border-transparent bg-transparent py-1 text-[0.8125rem] tracking-[0.04em] hover:border-line focus:border-ink focus:outline-none">
+          {% for key, label in sorts.items() %}
+          <option value="{{ key }}" {{ 'selected' if active.orden == key }}>{{ label }}</option>
+          {% endfor %}
+        </select>
+        <button type="submit" class="eyebrow text-ink transition-colors hover:text-copper" data-hide-with-js>Aplicar</button>
+      </div>
+    </form>
+
+    {% if products %}
+    <div class="pt-12">
+      {{ product_grid(products, asset_url, columns='sm:grid-cols-2 xl:grid-cols-3') }}
+    </div>
+    {% else %}
+    <div class="border-b border-line py-28 text-center">
+      <p class="font-display text-3xl">Sin coincidencias</p>
+      <p class="mx-auto mt-4 max-w-sm text-[0.9375rem] leading-relaxed text-ink-soft">
+        No encontramos piezas con esos criterios. Prueba quitando algún filtro o busca otra prenda.
+      </p>
+      <a href="{{ url_for('storefront.collection') }}" class="btn btn-outline mt-9">Ver toda la colección</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} — Terlux{% endblock %}
+{% block content %}
+{% include "partials/page_shell.html" %}
+<div class="shell grid gap-12 py-14 lg:grid-cols-[minmax(0,34rem)_minmax(0,1fr)] lg:gap-20">
+  <div class="space-y-10 text-[0.9375rem] leading-relaxed text-ink-soft">
+    {% block body %}{% endblock %}
+  </div>
+  <aside class="lg:sticky lg:top-36 lg:self-start">
+    <div class="border border-line bg-paper p-8">
+      <h2 class="eyebrow">Atención a clientes</h2>
+      <p class="mt-5 text-[0.8125rem] leading-relaxed text-ink-soft">
+        Lunes a viernes de 9:00 a 18:00 h, sábados de 10:00 a 14:00 h.
+      </p>
+      <p class="mt-5 font-display text-xl">55 4162 0938</p>
+      <p class="mt-1 text-[0.8125rem] text-ink-soft">hola@terlux.mx</p>
+    </div>
+  </aside>
+</div>
+{% endblock %}

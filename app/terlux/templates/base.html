@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Terlux{% endblock %}</title>
+  <meta name="description" content="{% block description %}Terlux. Prendas y accesorios en ediciones cortas, hechos para durar.{% endblock %}">
+  <meta name="theme-color" content="#f1eee7">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="preload" href="{{ url_for('static', filename='fonts/Jost-normal-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ url_for('static', filename='fonts/BodoniModa-normal-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/terlux.css') }}">
+</head>
+<body class="flex min-h-screen flex-col bg-bone text-ink">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:bg-ink focus:px-5 focus:py-3 focus:text-bone focus:uppercase focus:tracking-[0.18em] focus:text-xs">Saltar al contenido</a>
+  {% include "partials/header.html" %}
+  <main id="contenido" class="flex-1">
+    {% include "partials/flash.html" %}
+    {% block content %}{% endblock %}
+  </main>
+  {% include "partials/footer.html" %}
+  <script src="{{ url_for('static', filename='js/terlux.js') }}" defer></script>
+</body>
+</html>

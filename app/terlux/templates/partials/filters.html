@@ -1,0 +1,68 @@
+{% set has_filters = active.categoria or active.talla or active.oferta or active.q %}
+<div class="space-y-9">
+  <section>
+    <h2 class="eyebrow">Línea</h2>
+    <ul class="mt-4 space-y-2.5 text-[0.8125rem]">
+      <li>
+        <a href="{{ collection_url() }}"
+           class="underline-sweep {{ 'text-ink' if not line else 'text-ink-soft hover:text-ink' }}"
+           {% if not line %}aria-current="page"{% endif %}>Todas</a>
+      </li>
+      {% for item in catalog.lines %}
+      <li>
+        <a href="{{ collection_url(item.slug) }}"
+           class="underline-sweep {{ 'text-ink' if line and line.slug == item.slug else 'text-ink-soft hover:text-ink' }}"
+           {% if line and line.slug == item.slug %}aria-current="page"{% endif %}>{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% if categories | length > 1 %}
+  <section class="border-t border-line pt-7">
+    <h2 class="eyebrow">Categoría</h2>
+    <ul class="mt-4 space-y-2.5 text-[0.8125rem]">
+      <li>
+        <a href="{{ filter_url(categoria=none) }}"
+           class="underline-sweep {{ 'text-ink' if not active.categoria else 'text-ink-soft hover:text-ink' }}">Todas</a>
+      </li>
+      {% for item in categories %}
+      <li>
+        <a href="{{ filter_url(categoria=item.slug) }}"
+           class="underline-sweep {{ 'text-ink' if active.categoria == item.slug else 'text-ink-soft hover:text-ink' }}"
+           {% if active.categoria == item.slug %}aria-current="page"{% endif %}>{{ item.name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if sizes %}
+  <section class="border-t border-line pt-7">
+    <h2 class="eyebrow">Talla</h2>
+    <div class="mt-4 flex flex-wrap gap-2">
+      {% for size in sizes %}
+      <a href="{{ filter_url(talla=none if active.talla == size else size) }}"
+         class="min-w-11 border px-3 py-2 text-center text-xs tracking-[0.04em] transition-colors
+                {{ 'border-ink bg-ink text-bone' if active.talla == size else 'border-line text-ink-soft hover:border-ink hover:text-ink' }}">{{ size }}</a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="border-t border-line pt-7">
+    <h2 class="eyebrow">Precio</h2>
+    <a href="{{ filter_url(oferta=none if active.oferta else 1) }}"
+       class="mt-4 inline-flex items-center gap-3 text-[0.8125rem] {{ 'text-copper' if active.oferta else 'text-ink-soft hover:text-ink' }}">
+      <span class="flex h-3.5 w-3.5 items-center justify-center border {{ 'border-copper bg-copper' if active.oferta else 'border-line' }}">
+        {% if active.oferta %}<span class="h-1.5 w-1.5 bg-bone"></span>{% endif %}
+      </span>
+      Solo rebajas
+    </a>
+  </section>
+
+  {% if has_filters %}
+  <a href="{{ url_for('storefront.collection', line_slug=line.slug if line else none) }}"
+     class="eyebrow block border-t border-line pt-7 text-copper transition-colors hover:text-ink">Limpiar filtros</a>
+  {% endif %}
+</div>

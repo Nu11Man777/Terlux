@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import tint %}
+
+{% block title %}Tu bolsa — Terlux{% endblock %}
+
+{% block content %}
+<div class="shell border-b border-line pb-10 pt-12">
+  <h1 class="font-display text-[clamp(2.5rem,6vw,4.25rem)] leading-[0.95]">Tu bolsa</h1>
+  <p class="eyebrow mt-5">{{ cart.count }} {{ 'pieza' if cart.count == 1 else 'piezas' }}</p>
+</div>
+
+{% if cart.is_empty %}
+<div class="shell py-28 text-center">
+  <p class="font-display text-3xl">Todavía no hay nada aquí</p>
+  <p class="mx-auto mt-4 max-w-sm text-[0.9375rem] leading-relaxed text-ink-soft">
+    Cuando agregues una pieza aparecerá en esta página junto con el resumen de tu pedido.
+  </p>
+  <a href="{{ url_for('storefront.collection') }}" class="btn btn-ink mt-10">Ver la colección</a>
+</div>
+{% else %}
+<div class="shell grid gap-14 py-12 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-20">
+  <div>
+    {% if cart.missing_for_free_shipping > 0 %}
+    <div class="mb-10 border border-line bg-paper px-6 py-5">
+      <p class="text-[0.8125rem] text-ink-soft">
+        Te faltan <span class="text-ink tabular-nums">{{ cart.missing_for_free_shipping | money }}</span> para el envío sin costo.
+      </p>
+      <div class="mt-3 h-px w-full bg-line">
+        <div class="h-px bg-copper" style="width: {{ (cart.subtotal / free_shipping_from * 100) | round | int }}%"></div>
+      </div>
+    </div>
+    {% else %}
+    <p class="eyebrow mb-10 text-copper">Tu pedido tiene envío sin costo</p>
+    {% endif %}
+
+    <ul class="border-t border-line">
+      {% for line in cart.lines %}
+      <li class="flex gap-6 border-b border-line py-7">
+        <a href="{{ url_for('storefront.product', slug=line.product.slug) }}" class="field aspect-[4/5] w-24 shrink-0 sm:w-28 {{ tint(line.product) }}">
+          <img src="{{ asset_url(line.product) }}" alt="{{ line.product.name }}" width="1000" height="1000" loading="lazy" class="h-full w-full object-contain p-3">
+        </a>
+
+        <div class="flex min-w-0 flex-1 flex-col justify-between gap-4">
+          <div class="flex items-start justify-between gap-5">
+            <div class="min-w-0">
+              <a href="{{ url_for('storefront.product', slug=line.product.slug) }}" class="font-display text-xl leading-tight transition-colors hover:text-copper">{{ line.product.name }}</a>
+              <p class="mt-1.5 text-[0.8125rem] text-ink-soft">
+                {{ 'Presentación' if line.product.one_size else 'Talla' }} {{ line.size }}
+                {% for color in line.product.colors %}· {{ color.name }}{% endfor %}
+              </p>
+            </div>
+            <p class="shrink-0 text-[0.9375rem] tabular-nums">{{ line.total | money }}</p>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <form method="post" action="{{ url_for('storefront.cart_update') }}" class="flex items-center gap-3">
+              <input type="hidden" name="key" value="{{ line.key }}">
+              <label for="qty-{{ loop.index }}" class="eyebrow">Cantidad</label>
+              <select id="qty-{{ loop.index }}" name="cantidad" data-autosubmit
+                      class="cursor-pointer border border-line bg-transparent px-3 py-1.5 text-[0.8125rem] focus:border-ink focus:outline-none">
+                {% for n in range(1, 11) %}
+                <option value="{{ n }}" {{ 'selected' if n == line.quantity }}>{{ n }}</option>
+                {% endfor %}
+              </select>
+              <button type="submit" class="eyebrow text-ink transition-colors hover:text-copper" data-hide-with-js>Actualizar</button>
+            </form>
+
+            <form method="post" action="{{ url_for('storefront.cart_remove') }}">
+              <input type="hidden" name="key" value="{{ line.key }}">
+              <button type="submit" class="underline-sweep text-[0.8125rem] text-ink-faint transition-colors hover:text-copper">Eliminar</button>
+            </form>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('storefront.collection') }}" class="underline-sweep mt-9 inline-block text-[0.8125rem]">Seguir viendo la colección</a>
+  </div>
+
+  <aside class="lg:sticky lg:top-36 lg:self-start">
+    <div class="border border-line bg-paper p-8">
+      <h2 class="font-display text-2xl">Resumen</h2>
+      <dl class="mt-7 space-y-3.5 text-[0.8125rem]">
+        <div class="flex justify-between gap-6">
+          <dt class="text-ink-soft">Subtotal</dt>
+          <dd class="tabular-nums">{{ cart.subtotal | money }}</dd>
+        </div>
+        <div class="flex justify-between gap-6">
+          <dt class="text-ink-soft">Envío</dt>
+          <dd class="tabular-nums">{{ 'Sin costo' if cart.shipping == 0 else cart.shipping | money }}</dd>
+        </div>
+        <div class="flex justify-between gap-6 border-t border-line pt-4 text-base">
+          <dt>Total</dt>
+          <dd class="font-display tabular-nums">{{ cart.total | money }}</dd>
+        </div>
+        <div class="flex justify-between gap-6 text-[0.6875rem] uppercase tracking-[0.16em] text-ink-faint">
+          <dt>IVA incluido</dt>
+          <dd class="tabular-nums">{{ cart.tax | money }}</dd>
+        </div>
+      </dl>
+
+      <button type="button" class="btn btn-ink mt-8 w-full" disabled>Proceder al pago</button>
+      <p class="mt-4 text-center text-[0.75rem] leading-relaxed text-ink-faint">
+        El pago en línea estará disponible próximamente. Escríbenos para completar tu pedido.
+      </p>
+    </div>
+  </aside>
+</div>
+{% endif %}
+{% endblock %}

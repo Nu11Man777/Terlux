@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Página no encontrada — Terlux{% endblock %}
+{% block content %}
+<div class="shell py-32 text-center">
+  <p class="eyebrow">Error 404</p>
+  <h1 class="mt-7 font-display text-[clamp(3rem,8vw,6rem)] leading-[0.9]">Esta página<br><em>ya no existe</em></h1>
+  <p class="mx-auto mt-7 max-w-sm text-[0.9375rem] leading-relaxed text-ink-soft">
+    Es posible que la pieza se haya agotado o que la dirección haya cambiado.
+  </p>
+  <a href="{{ url_for('storefront.collection') }}" class="btn btn-ink mt-10">Ver la colección</a>
+</div>
+{% endblock %}

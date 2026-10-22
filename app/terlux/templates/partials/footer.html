@@ -1,0 +1,46 @@
+<footer class="mt-28 border-t border-line bg-paper">
+  <div class="shell grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+    <div class="lg:col-span-1">
+      <p class="font-display text-xl tracking-brand pl-[0.42em]">TERLUX</p>
+      <p class="mt-5 max-w-xs text-[0.8125rem] leading-relaxed text-ink-soft">
+        Ediciones cortas de prendas y accesorios. Producimos poco, cuidamos la materia prima y reponemos solo lo que vale la pena.
+      </p>
+    </div>
+
+    <nav aria-labelledby="footer-tienda">
+      <h2 id="footer-tienda" class="eyebrow">Tienda</h2>
+      <ul class="mt-5 space-y-3 text-[0.8125rem]">
+        {% for item in catalog.lines %}
+        <li><a href="{{ url_for('storefront.collection', line_slug=item.slug) }}" class="underline-sweep transition-colors hover:text-copper">{{ item.name }}</a></li>
+        {% endfor %}
+        <li><a href="{{ url_for('storefront.collection', oferta=1) }}" class="underline-sweep transition-colors hover:text-copper">Rebajas</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="footer-ayuda">
+      <h2 id="footer-ayuda" class="eyebrow">Ayuda</h2>
+      <ul class="mt-5 space-y-3 text-[0.8125rem]">
+        <li><a href="{{ url_for('storefront.page', slug='envios') }}" class="underline-sweep transition-colors hover:text-copper">Envíos y entregas</a></li>
+        <li><a href="{{ url_for('storefront.page', slug='devoluciones') }}" class="underline-sweep transition-colors hover:text-copper">Cambios y devoluciones</a></li>
+        <li><a href="{{ url_for('storefront.page', slug='tiendas') }}" class="underline-sweep transition-colors hover:text-copper">Tiendas</a></li>
+        <li><a href="{{ url_for('storefront.page', slug='contacto') }}" class="underline-sweep transition-colors hover:text-copper">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="eyebrow">Boletín</h2>
+      <p class="mt-5 text-[0.8125rem] leading-relaxed text-ink-soft">Avisos de nuevas piezas y accesos anticipados. Una carta al mes.</p>
+      <form class="mt-5 flex items-center gap-3 border-b border-line pb-2" method="get" action="{{ url_for('storefront.index') }}">
+        <label for="boletin" class="sr-only">Correo electrónico</label>
+        <input id="boletin" name="correo" type="email" required placeholder="tu@correo.com"
+               class="w-full bg-transparent text-[0.8125rem] placeholder:text-ink-faint/70 focus:outline-none">
+        <button type="submit" class="eyebrow shrink-0 text-ink transition-colors hover:text-copper">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="shell flex flex-col items-start justify-between gap-4 border-t border-line py-7 text-[0.6875rem] uppercase tracking-[0.18em] text-ink-faint md:flex-row md:items-center">
+    <p>© {{ now_year }} Terlux S.A. de C.V.</p>
+    <p>Ciudad de México</p>
+  </div>
+</footer>

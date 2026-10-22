@@ -1,0 +1,51 @@
+{% set FIELD_TINTS = ['bg-field-bone', 'bg-field-sage', 'bg-field-clay', 'bg-field-slate', 'bg-field-rose', 'bg-field-olive'] %}
+
+{% macro tint(product) -%}
+{{ FIELD_TINTS[product.index % FIELD_TINTS | length] }}
+{%- endmacro %}
+
+{% macro price_tag(product, size='text-sm') %}
+<p class="{{ size }} shrink-0 tabular-nums">
+  {% if product.on_sale %}
+  <span class="mr-2 text-ink-faint line-through">{{ product.compare_at | money_short }}</span>
+  <span class="text-copper">{{ product.price | money_short }}</span>
+  {% else %}
+  <span>{{ product.price | money_short }}</span>
+  {% endif %}
+</p>
+{% endmacro %}
+
+{% macro product_card(product, asset_url, number=none, eager=false) %}
+<article>
+  <a href="{{ url_for('storefront.product', slug=product.slug) }}" class="group block">
+    <div class="field aspect-[4/5] {{ tint(product) }}">
+      {% if product.badge %}
+      <span class="eyebrow absolute left-4 top-4 z-10 text-ink">{{ product.badge }}</span>
+      {% elif product.on_sale %}
+      <span class="eyebrow absolute left-4 top-4 z-10 text-copper">−{{ product.discount }}%</span>
+      {% endif %}
+      {% if number is not none %}
+      <span class="absolute right-4 top-4 z-10 font-display text-xs tabular-nums text-ink/35">{{ '%02d' % number }}</span>
+      {% endif %}
+      <img src="{{ asset_url(product) }}" alt="{{ product.name }}" width="1000" height="1000"
+           loading="{{ 'eager' if eager else 'lazy' }}" decoding="async"
+           class="h-full w-full object-contain p-7 md:p-10">
+    </div>
+    <div class="mt-4 flex items-baseline justify-between gap-5">
+      <h3 class="font-display text-lg leading-tight transition-colors group-hover:text-copper">{{ product.name }}</h3>
+      {{ price_tag(product) }}
+    </div>
+    <p class="mt-1.5 text-[0.8125rem] leading-relaxed text-ink-soft">{{ product.summary }}</p>
+  </a>
+</article>
+{% endmacro %}
+
+{% macro product_grid(products, asset_url, numbered=false, columns='sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4') %}
+<div class="grid grid-cols-1 gap-x-6 gap-y-14 {{ columns }}">
+  {% for product in products %}
+  <div class="rise" style="animation-delay: {{ (loop.index0 % 4) * 70 }}ms">
+    {{ product_card(product, asset_url, number=loop.index if numbered else none, eager=loop.index <= 4) }}
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
