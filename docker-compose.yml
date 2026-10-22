@@ -1,0 +1,79 @@
+name: terlux
+
+x-storage-image: &storage-image bitnamilegacy/minio@sha256:451fe6858cb770cc9d0e77ba811ce287420f781c7c1b806a386f6896471a349c
+x-client-image: &client-image bitnamilegacy/minio-client@sha256:00dcc4e58ada0df45bb7d9ee435af98295f96c27c3c68292ce78ec700a87b511
+
+services:
+  storage:
+    image: *storage-image
+    container_name: terlux-storage
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: terlux-ops
+      MINIO_ROOT_PASSWORD: Tx9mPq2LvR4sKd81
+      MINIO_REGION: mx-central-1
+      MINIO_SKIP_CLIENT: "yes"
+    volumes:
+      - storage-data:/bitnami/minio/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 15s
+    networks:
+      terlux-vpc:
+        ipv4_address: 10.23.61.5
+        aliases:
+          - assets.terlux.internal
+
+  web:
+    build:
+      context: ./app
+    image: terlux/web:1.0.0
+    container_name: terlux-web
+    restart: unless-stopped
+    environment:
+      SECRET_KEY: 3f9c1d47a6b24e08bd5571c2e9a4f0d6
+      ASSETS_BASE_URL: http://assets.terlux.internal:9000
+      ASSETS_BUCKET: terlux-assets
+      ASSETS_CATALOG_PREFIX: public/catalog
+    ports:
+      - "8000:8000"
+    depends_on:
+      storage:
+        condition: service_healthy
+    networks:
+      terlux-vpc:
+        ipv4_address: 10.23.61.10
+        aliases:
+          - terlux.internal
+
+  mc:
+    image: *client-image
+    profiles:
+      - ops
+    user: root
+    environment:
+      MC_CONFIG_DIR: /mc
+    volumes:
+      - mc-config:/mc
+    entrypoint: ["mc"]
+    networks:
+      - terlux-vpc
+
+volumes:
+  storage-data:
+  mc-config:
+
+networks:
+  terlux-vpc:
+    name: terlux-vpc
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.23.61.0/24
+          gateway: 10.23.61.1
