@@ -1,0 +1,1075 @@
+{
+  "lines": [
+    {
+      "slug": "mujer",
+      "name": "Mujer",
+      "tagline": "Vestidos, calzado y piezas de temporada."
+    },
+    {
+      "slug": "hombre",
+      "name": "Hombre",
+      "tagline": "Camisas de sastre y calzado de diario."
+    },
+    {
+      "slug": "accesorios",
+      "name": "Accesorios",
+      "tagline": "Bolsos, gafas y joyería en ediciones cortas."
+    }
+  ],
+  "categories": [
+    {
+      "slug": "vestidos",
+      "name": "Vestidos"
+    },
+    {
+      "slug": "camisas",
+      "name": "Camisas"
+    },
+    {
+      "slug": "calzado",
+      "name": "Calzado"
+    },
+    {
+      "slug": "bolsos",
+      "name": "Bolsos"
+    },
+    {
+      "slug": "gafas",
+      "name": "Gafas"
+    },
+    {
+      "slug": "joyeria",
+      "name": "Joyería"
+    }
+  ],
+  "products": [
+    {
+      "slug": "vestido-larisa",
+      "name": "Vestido Larisa",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 489000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Negro floral",
+          "hex": "#1C1A22"
+        }
+      ],
+      "summary": "Vestido largo de hombros descubiertos con estampado floral.",
+      "description": "Silueta de talle ajustado y falda amplia que cae en pliegues suaves. El estampado floral sobre fondo negro mantiene la pieza sobria a pesar del volumen.",
+      "materials": "70% viscosa, 30% seda. Forro de cupro.",
+      "care": "Limpieza en seco. Planchar del revés a baja temperatura.",
+      "badge": "Nuevo",
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "conjunto-noir",
+      "name": "Conjunto Noir",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 549000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Negro",
+          "hex": "#131316"
+        }
+      ],
+      "summary": "Corsé de piel con falda midi a juego.",
+      "description": "Dos piezas pensadas para llevarse juntas o por separado. El corsé estructurado marca la cintura y la falda cae recta hasta media pierna.",
+      "materials": "Piel de cordero. Falda en mezcla de lana.",
+      "care": "Limpieza en seco especializada en piel.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "vestido-vela",
+      "name": "Vestido Vela",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 429000,
+      "compare_at": 489000,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Negro",
+          "hex": "#16161A"
+        }
+      ],
+      "summary": "Corsé entallado sobre falda negra de vuelo.",
+      "description": "Escote recto y varillas internas que sostienen la silueta sin rigidez. La falda suma movimiento con un corte al bies.",
+      "materials": "Mezcla de algodón y elastano. Falda de crepé.",
+      "care": "Lavar a mano en frío. No usar secadora.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "vestido-pea",
+      "name": "Vestido Pea",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 369000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Verde salvia",
+          "hex": "#7D8A6F"
+        }
+      ],
+      "summary": "Vestido corto de línea A con cuello redondo.",
+      "description": "Una pieza de uso diario, fácil de combinar y de caída limpia. El largo por encima de la rodilla y las mangas cortas la hacen cómoda todo el año.",
+      "materials": "100% algodón peinado.",
+      "care": "Lavar a máquina a 30°C con colores similares.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "traje-rubina",
+      "name": "Traje Rubina",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 725000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Rojo y negro",
+          "hex": "#8E2230"
+        }
+      ],
+      "summary": "Traje de dos piezas en rojo profundo y negro.",
+      "description": "Saco de hombros definidos y pantalón de pierna recta. El contraste de color se concentra en las solapas y los puños.",
+      "materials": "Lana virgen con un 4% de elastano.",
+      "care": "Limpieza en seco. Colgar en percha ancha.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "vestido-adria",
+      "name": "Vestido Adria",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 319000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Azul porcelana",
+          "hex": "#4A6E97"
+        }
+      ],
+      "summary": "Vestido azul con falda plisada y cintura marcada.",
+      "description": "El plisado nace en la cintura y mantiene la forma gracias a un tejido de cuerpo medio. Cierre lateral oculto.",
+      "materials": "65% poliéster reciclado, 35% viscosa.",
+      "care": "Lavar a máquina en ciclo delicado. Planchar en frío.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "vestido-siena",
+      "name": "Vestido Siena",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 289000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Marfil",
+          "hex": "#E6DCCB"
+        }
+      ],
+      "summary": "Vestido ligero de verano con tirantes ajustables.",
+      "description": "Tejido fresco y forro corto que evita transparencias. Los tirantes se regulan para adaptar el escote.",
+      "materials": "100% lino lavado.",
+      "care": "Lavar a máquina a 30°C. Secar a la sombra.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "vestido-lino",
+      "name": "Vestido Lino",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 345000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Gris piedra",
+          "hex": "#8C8A86"
+        }
+      ],
+      "summary": "Vestido gris de corte recto y manga tres cuartos.",
+      "description": "Una pieza discreta con buena caída, pensada para el día a día de oficina. El cinturón de tela es desmontable.",
+      "materials": "55% lino, 45% viscosa.",
+      "care": "Lavar a mano en frío. Planchar húmedo.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "vestido-mila",
+      "name": "Vestido Mila",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 299000,
+      "compare_at": 349000,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Blanco roto",
+          "hex": "#EFE9DF"
+        }
+      ],
+      "summary": "Vestido corto con cintura fruncida.",
+      "description": "El fruncido recoge el talle y deja la falda suelta. Mangas abullonadas cortas y espalda con cierre de botón.",
+      "materials": "100% algodón orgánico.",
+      "care": "Lavar a máquina a 30°C del revés.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "vestido-beatrix",
+      "name": "Vestido Beatrix",
+      "line": "mujer",
+      "category": "vestidos",
+      "price": 379000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Tartán",
+          "hex": "#6B4A3A"
+        }
+      ],
+      "summary": "Vestido de tartán con falda tableada.",
+      "description": "Un clásico de invierno con tejido de cuerpo y tablas marcadas. Lleva forro interior en la falda.",
+      "materials": "80% lana, 20% poliamida.",
+      "care": "Limpieza en seco.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "sandalia-duna",
+      "name": "Sandalia Duna",
+      "line": "mujer",
+      "category": "calzado",
+      "price": 219000,
+      "compare_at": null,
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "colors": [
+        {
+          "name": "Negro y café",
+          "hex": "#4A3B30"
+        }
+      ],
+      "summary": "Sandalia plana de tiras anchas en piel.",
+      "description": "Plantilla acolchada y suela flexible de goma. Las tiras cruzadas sujetan el pie sin apretar.",
+      "materials": "Piel vacuna. Suela de caucho.",
+      "care": "Limpiar con paño húmedo. Usar crema nutritiva.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "zapatilla-ilaria",
+      "name": "Zapatilla Ilaria",
+      "line": "mujer",
+      "category": "calzado",
+      "price": 389000,
+      "compare_at": null,
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "colors": [
+        {
+          "name": "Negro",
+          "hex": "#17171A"
+        }
+      ],
+      "summary": "Zapatilla de tacón medio con punta afilada.",
+      "description": "Tacón de 7 cm y empeine bajo que alarga la pierna. Forro interior en piel.",
+      "materials": "Piel napa. Suela de cuero con refuerzo de goma.",
+      "care": "Guardar con horma. Limpiar con paño suave.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "zapatilla-aurea",
+      "name": "Zapatilla Áurea",
+      "line": "mujer",
+      "category": "calzado",
+      "price": 415000,
+      "compare_at": null,
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "colors": [
+        {
+          "name": "Oro",
+          "hex": "#B99455"
+        }
+      ],
+      "summary": "Zapatilla dorada de tacón fino para noche.",
+      "description": "Acabado metalizado y tira al tobillo con hebilla regulable. Pensada para eventos.",
+      "materials": "Piel metalizada. Plantilla acolchada.",
+      "care": "Evitar humedad. Guardar en bolsa de tela.",
+      "badge": "Nuevo",
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "mocasin-pampa",
+      "name": "Mocasín Pampa",
+      "line": "mujer",
+      "category": "calzado",
+      "price": 275000,
+      "compare_at": null,
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "colors": [
+        {
+          "name": "Camel",
+          "hex": "#9B7A52"
+        }
+      ],
+      "summary": "Mocasín de piel con antifaz clásico.",
+      "description": "Horma ancha y suela ligera de goma. Se adapta al pie después de unos días de uso.",
+      "materials": "Piel flor entera.",
+      "care": "Cepillar y nutrir cada pocas semanas.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "zapatilla-granate",
+      "name": "Zapatilla Granate",
+      "line": "mujer",
+      "category": "calzado",
+      "price": 359000,
+      "compare_at": 399000,
+      "sizes": [
+        "22",
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "colors": [
+        {
+          "name": "Granate",
+          "hex": "#7A2230"
+        }
+      ],
+      "summary": "Zapatilla granate de tacón ancho.",
+      "description": "Tacón de 5 cm estable y puntera redondeada. Una alternativa cómoda al salón clásico.",
+      "materials": "Ante. Suela de goma antideslizante.",
+      "care": "Cepillar en seco. Aplicar protector de ante.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "camisa-tarno",
+      "name": "Camisa Tarno",
+      "line": "hombre",
+      "category": "camisas",
+      "price": 189000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Azul y negro",
+          "hex": "#2C3A4C"
+        }
+      ],
+      "summary": "Camisa de cuadros en franela de algodón.",
+      "description": "Corte regular con bolsillo de parche en el pecho. La franela cepillada da un tacto suave desde el primer uso.",
+      "materials": "100% algodón cepillado.",
+      "care": "Lavar a máquina a 30°C. Planchar a temperatura media.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "camisa-kerr",
+      "name": "Camisa Kerr",
+      "line": "hombre",
+      "category": "camisas",
+      "price": 209000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Cuadro escocés",
+          "hex": "#5C3B33"
+        }
+      ],
+      "summary": "Camisa de cuadros con cuello abotonado.",
+      "description": "Pensada para llevar abierta sobre una playera o cerrada con pantalón de vestir. Puños ajustables con dos botones.",
+      "materials": "Mezcla de algodón y lana.",
+      "care": "Lavar a mano o ciclo delicado.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "camisa-nilo",
+      "name": "Camisa Nilo",
+      "line": "hombre",
+      "category": "camisas",
+      "price": 179000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Azul estampado",
+          "hex": "#35537A"
+        }
+      ],
+      "summary": "Camisa de manga corta con estampado botánico.",
+      "description": "Cuello camp y corte holgado. El estampado en dos tonos de azul la mantiene fácil de combinar.",
+      "materials": "100% viscosa de origen responsable.",
+      "care": "Lavar a máquina en frío. Colgar para secar.",
+      "badge": "Nuevo",
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "camisa-ravel",
+      "name": "Camisa Ravel",
+      "line": "hombre",
+      "category": "camisas",
+      "price": 199000,
+      "compare_at": null,
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Cuadro gris",
+          "hex": "#4D5257"
+        }
+      ],
+      "summary": "Camisa de cuadro fino en algodón peinado.",
+      "description": "Un básico de vestir con cuello italiano y espalda con canesú. Entalle ligero sin resultar ajustado.",
+      "materials": "100% algodón peinado.",
+      "care": "Lavar a máquina a 40°C. Planchar en húmedo.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "tenis-arco",
+      "name": "Tenis Arco",
+      "line": "hombre",
+      "category": "calzado",
+      "price": 329000,
+      "compare_at": null,
+      "sizes": [
+        "25",
+        "26",
+        "27",
+        "28",
+        "29"
+      ],
+      "colors": [
+        {
+          "name": "Hueso y rojo",
+          "hex": "#C9C2B4"
+        }
+      ],
+      "summary": "Tenis de perfil bajo en piel y malla.",
+      "description": "Suela de goma vulcanizada y refuerzo en la puntera. Entresuela ligera con amortiguación discreta.",
+      "materials": "Piel y malla técnica. Suela de caucho.",
+      "care": "Limpiar con cepillo suave y jabón neutro.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "tenis-sendero",
+      "name": "Tenis Sendero",
+      "line": "hombre",
+      "category": "calzado",
+      "price": 319000,
+      "compare_at": 359000,
+      "sizes": [
+        "25",
+        "26",
+        "27",
+        "28",
+        "29"
+      ],
+      "colors": [
+        {
+          "name": "Hueso",
+          "hex": "#D6CEC0"
+        }
+      ],
+      "summary": "Tenis de diario con suela de goma gruesa.",
+      "description": "Horma cómoda para jornadas largas y cordones planos de algodón encerado. Plantilla extraíble.",
+      "materials": "Piel sintética y textil.",
+      "care": "Limpiar con paño húmedo.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp",
+        "04.webp"
+      ]
+    },
+    {
+      "slug": "bolso-cala",
+      "name": "Bolso Cala",
+      "line": "accesorios",
+      "category": "bolsos",
+      "price": 395000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Azul tinta",
+          "hex": "#2E4664"
+        }
+      ],
+      "summary": "Bolso de mano estructurado con asa corta.",
+      "description": "Interior forrado con un bolsillo con cierre. Mantiene la forma incluso vacío.",
+      "materials": "Piel saffiano. Herrajes dorados.",
+      "care": "Guardar relleno en su bolsa de tela.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "bolso-heira",
+      "name": "Bolso Heira",
+      "line": "accesorios",
+      "category": "bolsos",
+      "price": 469000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Café",
+          "hex": "#6B4A33"
+        }
+      ],
+      "summary": "Bolso de piel con bandolera desmontable.",
+      "description": "Tres compartimentos y cierre superior con solapa. La correa se regula para llevarlo cruzado.",
+      "materials": "Piel vacuna curtida al vegetal.",
+      "care": "Nutrir la piel cada temporada.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "mochila-nube",
+      "name": "Mochila Nube",
+      "line": "accesorios",
+      "category": "bolsos",
+      "price": 329000,
+      "compare_at": 369000,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Blanco",
+          "hex": "#E9E5DE"
+        }
+      ],
+      "summary": "Mochila blanca con compartimento acolchado.",
+      "description": "Cabe una laptop de 14 pulgadas. Tirantes anchos y bolsillo trasero con cierre oculto.",
+      "materials": "Piel sintética de alta resistencia.",
+      "care": "Limpiar con paño húmedo y jabón neutro.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "bolso-onix",
+      "name": "Bolso Ónix",
+      "line": "accesorios",
+      "category": "bolsos",
+      "price": 419000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Negro",
+          "hex": "#1B1B1E"
+        }
+      ],
+      "summary": "Bolso negro de diario con asa y bandolera.",
+      "description": "Formato intermedio, suficiente para lo esencial sin resultar voluminoso. Cierre de cremallera completo.",
+      "materials": "Piel granulada. Herrajes en níquel mate.",
+      "care": "Guardar en su bolsa de tela.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp"
+      ]
+    },
+    {
+      "slug": "gafas-noir",
+      "name": "Gafas Noir",
+      "line": "accesorios",
+      "category": "gafas",
+      "price": 159000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Negro",
+          "hex": "#141417"
+        }
+      ],
+      "summary": "Gafas de sol de pasta con montura cuadrada.",
+      "description": "Lentes con protección UV400 y bisagras metálicas. Incluyen estuche rígido y paño.",
+      "materials": "Acetato italiano. Lentes orgánicas.",
+      "care": "Guardar en el estuche. Limpiar con el paño incluido.",
+      "badge": null,
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "gafas-clasica",
+      "name": "Gafas Clásica",
+      "line": "accesorios",
+      "category": "gafas",
+      "price": 149000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Carey",
+          "hex": "#6B4A2A"
+        }
+      ],
+      "summary": "Montura redonda de acetato en acabado carey.",
+      "description": "Un formato atemporal que favorece a la mayoría de los rostros. Varillas con núcleo metálico.",
+      "materials": "Acetato. Lentes orgánicas UV400.",
+      "care": "Limpiar con paño de microfibra.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "gafas-verdi",
+      "name": "Gafas Verdi",
+      "line": "accesorios",
+      "category": "gafas",
+      "price": 169000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Verde",
+          "hex": "#3E5A44"
+        }
+      ],
+      "summary": "Gafas de sol con lente verde y montura negra.",
+      "description": "Lente degradada que reduce el brillo sin oscurecer en exceso. Puente reforzado.",
+      "materials": "Acetato y metal. Lentes UV400.",
+      "care": "Guardar en el estuche rígido.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "gafas-lumen",
+      "name": "Gafas Lumen",
+      "line": "accesorios",
+      "category": "gafas",
+      "price": 129000,
+      "compare_at": 159000,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Transparente",
+          "hex": "#BFC4C8"
+        }
+      ],
+      "summary": "Montura ligera de acetato translúcido.",
+      "description": "Pesa poco y se asienta bien gracias a las plaquetas ajustables. Lente espejada.",
+      "materials": "Acetato translúcido. Lente espejada UV400.",
+      "care": "Limpiar con agua tibia y paño suave.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "gafas-mara",
+      "name": "Gafas Mara",
+      "line": "accesorios",
+      "category": "gafas",
+      "price": 139000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Negro mate",
+          "hex": "#2A2A2D"
+        }
+      ],
+      "summary": "Gafas de sol de perfil fino y lente oscura.",
+      "description": "Montura discreta de uso diario. Varillas rectas con terminación de goma.",
+      "materials": "Metal y acetato. Lentes UV400.",
+      "care": "Guardar en el estuche incluido.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "arete-esmeralda",
+      "name": "Arete Esmeralda",
+      "line": "accesorios",
+      "category": "joyeria",
+      "price": 189000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Verde",
+          "hex": "#2F6B4F"
+        }
+      ],
+      "summary": "Aretes de cristal verde con engaste dorado.",
+      "description": "Piedra tallada en facetas sobre base de latón bañado en oro. Cierre de presión.",
+      "materials": "Latón con baño de oro de 18k. Cristal.",
+      "care": "Retirar antes de nadar. Guardar en seco.",
+      "badge": "Nuevo",
+      "featured": true,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "arete-oval",
+      "name": "Arete Oval",
+      "line": "accesorios",
+      "category": "joyeria",
+      "price": 165000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Verde oscuro",
+          "hex": "#27503C"
+        }
+      ],
+      "summary": "Aretes ovalados con piedra verde central.",
+      "description": "Formato alargado que estiliza sin pesar. Se llevan de día y de noche.",
+      "materials": "Latón con baño de oro de 18k.",
+      "care": "Evitar perfumes y cremas sobre la pieza.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    },
+    {
+      "slug": "arete-tropic",
+      "name": "Arete Tropic",
+      "line": "accesorios",
+      "category": "joyeria",
+      "price": 145000,
+      "compare_at": null,
+      "sizes": [
+        "Única"
+      ],
+      "colors": [
+        {
+          "name": "Multicolor",
+          "hex": "#9C5A3C"
+        }
+      ],
+      "summary": "Aretes colgantes de inspiración botánica.",
+      "description": "Piezas pintadas a mano, por lo que cada par presenta variaciones mínimas de tono.",
+      "materials": "Latón esmaltado.",
+      "care": "Limpiar con paño seco.",
+      "badge": null,
+      "featured": false,
+      "images": [
+        "01.webp",
+        "02.webp",
+        "03.webp"
+      ]
+    }
+  ]
+}
